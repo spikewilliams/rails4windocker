@@ -1,5 +1,5 @@
 #rails4windocker 0.1
-##Ruby on Rails on Docker on Windows
+##Ruby on Rails on Docker for Windows
 
 This creates a Ruby on Rails development environment that is shared between your Windows 10 desktop and a Docker container running CentOS. Use the bash command-line to administer Rails in a stable Linux environment, while accessing your code through Windows Explorer and the text editor of your choice.
 

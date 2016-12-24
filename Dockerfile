@@ -13,7 +13,7 @@ RUN git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-buil
 RUN echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
 RUN echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
 
-RUN yum -y install bzip2 openssl-devel readline-devel zlib-devel sqlite-devel gcc-c++ wget sudo nodejs
+RUN yum -y install bzip2 openssl-devel readline-devel zlib-devel sqlite-devel gcc-c++ wget sudo nodejs which
 
 # A javascript runtime is required by the uglify gem
 RUN curl --silent https://rpm.nodesource.com/setup_4.x | bash

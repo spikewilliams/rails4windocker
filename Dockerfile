@@ -10,14 +10,15 @@ RUN git clone https://github.com/rbenv/rbenv.git ~/.rbenv \
 
 RUN git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
 
-RUN echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
-RUN echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
+RUN echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+RUN echo 'eval "$(rbenv init -)"' >> ~/.bashrc
 
-RUN yum -y install bzip2 openssl-devel readline-devel zlib-devel sqlite-devel gcc-c++ wget sudo nodejs which
+RUN yum -y install bzip2 openssl-devel readline-devel zlib-devel sqlite-devel gcc-c++ wget sudo nodejs which autoconf
 
 # A javascript runtime is required by the uglify gem
-RUN curl --silent https://rpm.nodesource.com/setup_4.x | bash
+# RUN curl --silent https://rpm.nodesource.com/setup_4.x | bash
 
+#add heroku support
 RUN wget -qO- https://toolbelt.heroku.com/install.sh | sh
 
 #
@@ -28,6 +29,6 @@ COPY rootfs /
 
 EXPOSE 3000
 cmd rw4d_init
-
+git
 #RUN ~/.rbenv/bin/rbenv init
 #RUN ~/.rbenv/bin/rbenv install list

@@ -29,9 +29,9 @@ Now run the following from a cmd shell.
 
   Ruby 2.3.1 will be installed to the ~/.rbenv/versions/2.3.1 directory on the container, and also in the "ruby" directory under the current Windows directory. You can install as many different Ruby versions as you want.
 
-  Right now .bash_profile isn't getting run automatically for some reason, so you may need to do this to get your PATH squared away:
+  If .bashrc isn't run automatically for some reason, you may need to do this to get your PATH squared away:
 
-    source ~/.bash_profile
+    source ~/.bashrc
 
   To let the Linux environment know you want to use ruby version to 2.3.1:
 
@@ -49,7 +49,6 @@ Now run the following from a cmd shell.
   Run it:
 
     rails server -b 0.0.0.0
-    #Yes, you need to specify the loopback address
 
   Now open a browser in Windows to connect to 127.0.0.1:3000. You should see the default Rails welcome page.
 

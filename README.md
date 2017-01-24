@@ -48,14 +48,14 @@ Now run the following from a cmd shell.
 
   Run it:
 
-    rails server -b 0.0.0.0
+    rails server -b 0.0.0.0 -e environment
 
   Now open a browser in Windows to connect to 127.0.0.1:3000. You should see the default Rails welcome page.
 
 Things to know:
 
 * The CentOS install running in the Docker should have enough features to run some basic gems, but if you need more tools installed under that environment, use "yum install <tool>" at the bash prompt.
-* Keep in mind that your environment will forget these tools after the Docker image resets upon exiting.
+* Keep in mind that your environment will forget these tools if the Docker image is reset.
 * So, any yum installs that you want installed permanently should be added to the Dockerfile, then the docker image should be rebuilt using buildimage.bat.
 * If you need to connect addional shells to a running docker instance, use:
 

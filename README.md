@@ -1,6 +1,6 @@
 #rails4windocker: Ruby on Rails on Docker for Windows
 
-This creates a Ruby on Rails development environment that is shared between your Windows 10 desktop and a Docker container running CentOS. Use the bash command-line to administer Rails in a stable Linux environment, while accessing your code through Windows Explorer and the text editor of your choice.
+This creates a Ruby on Rails development environment that is shared between your Windows 10 desktop and a Docker container running Fedora. Use the bash command-line to administer Rails in a stable Linux environment, while accessing your code through Windows Explorer and the text editor of your choice.
 
 This is a development and testing environment. Don't run it in production - its not secure.
 
@@ -23,19 +23,19 @@ Now run the following from a cmd shell.
 
   If that worked, you are now in a bash shell on a Docker container.
 
-  To install a ruby version 2.3.1 in this environment:
+  To install a ruby version 2.4.1 in this environment:
 
-    r4wd_init 2.3.1
+    r4wd_init 2.4.1
 
-  Ruby 2.3.1 will be installed to the ~/.rbenv/versions/2.3.1 directory on the container, and also in the "ruby" directory under the current Windows directory. You can install as many different Ruby versions as you want.
+  Ruby 2.4.1 will be installed to the ~/.rbenv/versions/2.4.1 directory on the container, and also in the "ruby" directory under the current Windows directory. You can install as many different Ruby versions as you want.
 
   If .bashrc isn't run automatically for some reason, you may need to do this to get your PATH squared away:
 
     source ~/.bashrc
 
-  To let the Linux environment know you want to use ruby version to 2.3.1:
+  To let the Linux environment know you want to use ruby version to 2.4.1:
 
-    rbenv global 2.3.1
+    rbenv global 2.4.1
 
   To install rails:
 

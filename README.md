@@ -54,7 +54,7 @@ Now run the following from a cmd shell.
 
 Things to know:
 
-* The CentOS install running in the Docker should have enough features to run some basic gems, but if you need more tools installed under that environment, use "yum install <tool>" at the bash prompt.
+* The Fedora install running in the Docker should have enough features to run some basic gems, but if you need more tools installed under that environment, use "yum install <tool>" at the bash prompt.
 * Keep in mind that your environment will forget these tools if the Docker image is reset.
 * So, any yum installs that you want installed permanently should be added to the Dockerfile, then the docker image should be rebuilt using buildimage.bat.
 * If you need to connect addional shells to a running docker instance, use:

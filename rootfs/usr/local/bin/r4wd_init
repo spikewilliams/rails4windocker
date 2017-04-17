@@ -1,7 +1,7 @@
 #!/bin/sh
 export VERSION=$1
 
-#source ~/.bashrc
+source /root/.bashrc
 
 rbenv install $VERSION
 rbenv global $VERSION

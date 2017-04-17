@@ -4,7 +4,7 @@ MAINTAINER Bobby Williams spikewilliams@gmail.com @spike@mastodon.al
 RUN dnf -y install git gcc make bzip2 openssl-devel readline-devel zlib-devel \
                     sqlite-devel gcc-c++ wget sudo curl nodejs which autoconf fontconfig \
                     libxml2 libxml2-devel libxslt libxslt-devel \
-                    file ImageMagick
+                    findutils file ImageMagick
 
 RUN git clone https://github.com/rbenv/rbenv.git ~/.rbenv \
     && cd ~/.rbenv \

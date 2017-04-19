@@ -1,1 +1,0 @@
-docker build -t spikewilliams/rails4wd .

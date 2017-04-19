@@ -15,11 +15,15 @@ Now run the following from a cmd shell.
 
   To build the container:
 
-    buildimage.bat
+    build_image.bat
 
   To run the container on Docker for Windows:
 
-    runimage.bat
+    run_container.bat
+
+  Next, connect to the container:
+
+    connect_to_container.bat
 
   If that worked, you are now in a bash shell on a Docker container.
 
@@ -54,9 +58,8 @@ Now run the following from a cmd shell.
 
 Things to know:
 
+* You can make adjustments to paths/image names/whatever in the settings.cmd file in the root directory.
 * The Fedora install running in the Docker should have enough features to run some basic gems, but if you need more tools installed under that environment, use "yum install <tool>" at the bash prompt.
 * Keep in mind that your environment will forget these tools if the Docker image is reset.
 * So, any yum installs that you want installed permanently should be added to the Dockerfile, then the docker image should be rebuilt using buildimage.bat.
-* If you need to connect addional shells to a running docker instance, use:
-
-    docker exec -i -t rails4wd-access /bin/bash --login
+* If you need to connect additional shells to a running docker instance, use connect_to_container.bat

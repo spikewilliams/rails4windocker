@@ -52,7 +52,7 @@ Now run the following from a cmd shell.
 
   Run it:
 
-    rails server -b 0.0.0.0 -e environment
+    rails server -b 0.0.0.0 -e development
 
   Now open a browser in Windows to connect to 127.0.0.1:3000. You should see the default Rails welcome page.
 

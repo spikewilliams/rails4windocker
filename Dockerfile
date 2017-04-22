@@ -4,7 +4,7 @@ MAINTAINER Bobby Williams spikewilliams@gmail.com @spike@mastodon.al
 RUN dnf -y install git gcc make bzip2 openssl-devel readline-devel zlib-devel \
                     sqlite-devel gcc-c++ wget sudo curl which autoconf fontconfig \
                     libxml2 libxml2-devel libxslt libxslt-devel \
-                    findutils file ImageMagick nodejs yarn
+                    findutils file ImageMagick nodejs
 
 RUN git clone https://github.com/rbenv/rbenv.git ~/.rbenv \
     && cd ~/.rbenv \
@@ -24,8 +24,6 @@ RUN echo 'eval "$(rbenv init -)"' >> ~/.bashrc
 #    && bzip2 -dc phantomjs-2.1.1-linux-x86_64.tar.bz2 | tar x \
 #    && cd phantomjs-2.1.1-linux-x86_64 \
 #    && mv bin/phantomjs /usr/bin
-
-RUN dnf -y install yarn
 
 VOLUME ["/railsapp"]
 COPY rootfs /

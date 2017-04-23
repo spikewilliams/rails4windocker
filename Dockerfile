@@ -3,6 +3,7 @@ MAINTAINER Bobby Williams spikewilliams@gmail.com @spike@mastodon.al
 
 RUN dnf -y install git gcc make bzip2 openssl-devel readline-devel zlib-devel \
                     sqlite-devel gcc-c++ wget sudo curl which autoconf fontconfig \
+                    htop procps-ng \
                     libxml2 libxml2-devel libxslt libxslt-devel \
                     findutils file ImageMagick nodejs
 
